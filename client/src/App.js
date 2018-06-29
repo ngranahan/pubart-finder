@@ -1,9 +1,14 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NoMatch from './pages/NoMatch';
+import React, { Component } from 'react';
+import { GoogleApiWrapper } from 'google-maps-react' 
+import MapContainer from './pages/googleMapContainer'
+
+// import './App.css';
 
 const App = () => (
   <Router>
