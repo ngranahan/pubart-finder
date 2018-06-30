@@ -1,0 +1,11 @@
+.photo-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+
+}
+
+.photo-thumbnail {
+    max-width: 600px;
+    
+}
