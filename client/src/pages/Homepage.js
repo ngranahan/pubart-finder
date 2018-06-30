@@ -18,7 +18,8 @@ class Homepage extends Component {
                 <Navbar />
                 <SearchBar />
 
-                <Photo />
+
+          </List>
 
                 <Footer />
 
