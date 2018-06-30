@@ -37,5 +37,16 @@ router.get('/art/callapi', (req, res) => {
 });
 
 // TODO: Route to call database to retrieve artwork
+router.get('/art/getart', (req, res) => {
+    console.log('getting arwork from db')
+    Artwork.find({})
+    .then((dbArtwork) => {
+        console.log(dbArtwork);
+        res.json(dbArtwork);
+    })
+    .catch(err => {
+        return res.json(err);
+    })
+})
 
 module.exports = router;
