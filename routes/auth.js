@@ -11,7 +11,9 @@ router.get('/login', function (req, res) {
     res.render('login');
 });
 router.post('/login', passport.authenticate('local'), function (req, res) {
-    res.redirect('/');
+    console.log("REQ BODY: " + res.body);
+    // change
+    res.redirect('/'); 
 });
 
 router.get('/register', function (req, res) {
@@ -23,6 +25,7 @@ router.post('/register', function (req, res) {
             return res.render('error', { error: err });
         }
         passport.authenticate('local')(req, res, function () {
+            // change
             res.redirect('/');
         });
     });

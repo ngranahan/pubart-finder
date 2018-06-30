@@ -9,11 +9,12 @@ import 'react-bootstrap';
 import './Homepage.css';
 
 class Homepage extends Component {
- 
+   
     render() {
         // return (<div></div>)
        return (
        <div>
+        
                 <Navbar />
                 <SearchBar />
 

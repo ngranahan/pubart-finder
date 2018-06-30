@@ -6,25 +6,28 @@ import Photo from "../components/Photo";
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
 import 'react-bootstrap';
-import './Homepage.css';
 
-class Homepage extends Component {
+
+class UserAccount extends Component {
  
     render() {
         // return (<div></div>)
        return (
        <div>
-                <Navbar />
-                <SearchBar />
+           <h1> User logged in </h1>
+
+             <SearchBar />
+                {/* <Navbar />
+               
+
 
                 <Photo />
-
-                <Footer />
+                <Footer /> */}
 
         </div>
     );
     }
 }
 
-export default User;
+export default UserAccount;
 
