@@ -9,6 +9,23 @@ import 'react-bootstrap';
 import './Homepage.css';
 
 class Homepage extends Component {
+    state = {
+        artwork: []
+      };
+    
+      componentDidMount() {
+        this.loadArt();
+      }
+    
+      loadArt = () => {
+          console.log("loading artwork");
+        API.getArt()
+          .then(res => {
+            this.setState({ artwork: res.data })
+            console.log(this.state.artwork[0].title)
+          })
+          .catch(err => console.log(err));
+      };
  
     render() {
         // return (<div></div>)

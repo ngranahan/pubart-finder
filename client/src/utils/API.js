@@ -19,4 +19,8 @@ export default {
     callAPI: function () {
         return axios.get("/art/callapi")
     },
+    getArt: function () {
+        console.log("getArt function called")
+        return axios.get("/art/getart");
+    }
 };
