@@ -15,4 +15,8 @@ export default {
     logoutUser: function () {
         return axios.get("/auth/logout/");
     },
+    // Function calls artwork api with a given id to get artwork data then store to database
+    callAPI: function () {
+        return axios.get("/art/callapi")
+    },
 };
