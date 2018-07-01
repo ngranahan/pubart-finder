@@ -14,12 +14,13 @@ import MapContainer from './pages/googleMapContainer'
 
 
 
-const App = () => (
+class App extends Component {
 
+    render() {
+      return (
   <Router>
     <div>
    
-
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/callapi" component={GetArt} />
@@ -32,8 +33,9 @@ const App = () => (
       </Switch>
     </div>
   </Router>
-
-);
+      );
+    }
+    }
 
 export default App;
 
