@@ -16,35 +16,6 @@ import MapContainer from './pages/googleMapContainer'
 
 class App extends Component {
 
-  state: {
-    loggedIn:false;
-         };
-
-   componentDidMount() {
-          this.getUser();
-      }
-
-      getUser = () => {
-        // api call
-        API.getUser()
-            .then(res => {
-                this.setState( res.data );
-            })
-            .catch(err => console.log(err));
-    }
-
-    logoutUser = event => {
-        event.preventDefault();
-        API.logoutUser().then(res => {
-            console.log(res.data);
-            if (res.data == true) {
-                this.setState({ user: null });
-            }
-        })
-        .catch(err => console.log(err));
-    }
-
-
     render() {
       return (
   <Router>
