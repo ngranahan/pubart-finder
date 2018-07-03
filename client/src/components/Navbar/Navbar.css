@@ -1,5 +1,8 @@
 nav.navbar, .navbar-default {
-    background-color: green !important;
+    background-color: #14cc95 !important;
+    width: 100%;
+    position: fixed;
+    z-index: 6;
   }
   
   .navbar-default {

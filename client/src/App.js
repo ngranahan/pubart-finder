@@ -9,6 +9,7 @@ import NoMatch from './pages/NoMatch';
 import React, { Component } from 'react';
 import { GoogleApiWrapper } from 'google-maps-react' 
 import MapContainer from './pages/googleMapContainer'
+import './app.css';
 
 // import './App.css';
 
@@ -19,7 +20,7 @@ class App extends Component {
     render() {
       return (
   <Router>
-    <div>
+    <div className="app">
    
       <Switch>
         <Route exact path="/" component={Homepage} />

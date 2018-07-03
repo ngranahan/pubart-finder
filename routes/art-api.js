@@ -10,7 +10,7 @@ router.get('/art/callapi', (req, res) => {
         .then((response) => {
 
             //console.log(response);
-            console.log(response.data.body);
+            // console.log(response.data.body);
 
             let artwork = {};
 
@@ -25,7 +25,7 @@ router.get('/art/callapi', (req, res) => {
                 artwork, 
                 {upsert: true, new: true, runValidators: true})
                 .then((dbArtwork) => {
-                    console.log(dbArtwork);
+                    // console.log(dbArtwork);
                 })
 
             return res.json(artwork)
@@ -38,10 +38,10 @@ router.get('/art/callapi', (req, res) => {
 
 // TODO: Route to call database to retrieve artwork
 router.get('/art/getart', (req, res) => {
-    console.log('getting arwork from db')
+    // console.log('getting arwork from db')
     Artwork.find({})
     .then((dbArtwork) => {
-        console.log(dbArtwork);
+        // console.log(dbArtwork);
         res.json(dbArtwork);
     })
     .catch(err => {
