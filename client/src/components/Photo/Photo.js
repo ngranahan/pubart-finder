@@ -34,10 +34,18 @@ export default class Photo extends Component {
 
             {this.state.artwork.map(artwork => (
               
-
-              <Thumbnail className="photo-thumbnail" src={artwork.imageurl} alt="242x200"><h2>{artwork.title}</h2></Thumbnail>
+              <div className="photo-panel">
+                <div className="photo-content relative">
+                  <img src={artwork.imageurl} />
+                  <h4 className="absolute art-title">{artwork.title}</h4>
+                </div>
+              </div>
+              // <Thumbnail className="photo-panel" src={artwork.imageurl} alt="242x200">
+              //   <div className="photo-content">
+              //     <h2>{artwork.title}</h2>
+              //   </div>
+              // </Thumbnail>
             ))}
-
           </Grid>
         ) : (
             <h3>No Results to Display</h3>
