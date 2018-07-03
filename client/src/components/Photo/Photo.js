@@ -17,14 +17,17 @@ export default class Photo extends Component {
   }
 
   loadArt = () => {
-    console.log("loading artwork");
     API.getArt()
       .then(res => {
         this.setState({ artwork: res.data })
-        console.log(this.state.artwork[0].title)
+        // console.log(this.state.artwork[0].title)
       })
       .catch(err => console.log(err));
   };
+
+  viewArt = () => {
+    console.log("view art clicked");
+  }
 
   render() {
     return (
@@ -36,7 +39,7 @@ export default class Photo extends Component {
               
               <div className="photo-panel">
                 <div className="photo-content relative">
-                  <img src={artwork.imageurl} />
+                  <img src={artwork.imageurl} onClick={this.viewArt}/>
                   <h4 className="absolute art-title">{artwork.title}</h4>
                 </div>
               </div>
