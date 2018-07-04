@@ -22,5 +22,9 @@ export default {
     getArt: function () {
         console.log("getArt function called")
         return axios.get("/art/getart");
+    },
+    getSpecificArt: function (id) {
+        console.log("getSpecificArt function called")
+        return axios.get("/artwork/" + id);
     }
 };
