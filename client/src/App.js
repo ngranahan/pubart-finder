@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './pages/Home';
 import Homepage from './pages/Homepage';
 import GetArt from './pages/GetArt';
+import Artwork from './pages/Artwork';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NoMatch from './pages/NoMatch';
@@ -25,6 +26,7 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/callapi" component={GetArt} />
+        <Route exact path="/artwork/:id" component={Artwork} />
         {/* <Route path="/:user" component={User}/> */}
 
         <Route exact path="/home" component={Home} />

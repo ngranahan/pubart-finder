@@ -25,8 +25,9 @@ export default class Photo extends Component {
       .catch(err => console.log(err));
   };
 
-  viewArt = () => {
+  viewArt = (e) => {
     console.log("view art clicked");
+    
   }
 
   render() {
@@ -38,10 +39,12 @@ export default class Photo extends Component {
             {this.state.artwork.map(artwork => (
               
               <div className="photo-panel">
+              <a href={"/artwork/" + artwork._id} >
                 <div className="photo-content relative">
-                  <img src={artwork.imageurl} onClick={this.viewArt}/>
+                  <img src={artwork.imageurl} onClick={this.viewArt} data-id={artwork._id}/>
                   <h4 className="absolute art-title">{artwork.title}</h4>
                 </div>
+                </a>
               </div>
               // <Thumbnail className="photo-panel" src={artwork.imageurl} alt="242x200">
               //   <div className="photo-content">

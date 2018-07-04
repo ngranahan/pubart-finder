@@ -2,6 +2,7 @@ const axios = require('axios');
 const express = require('express');
 const Artwork = require('../models/art');
 const router = express.Router();
+const mongoose = require('mongoose');
 
 // Route to call api to grab artwork
 router.get('/art/callapi', (req, res) => {
@@ -38,15 +39,23 @@ router.get('/art/callapi', (req, res) => {
 
 // TODO: Route to call database to retrieve artwork
 router.get('/art/getart', (req, res) => {
-    // console.log('getting arwork from db')
     Artwork.find({})
     .then((dbArtwork) => {
-        // console.log(dbArtwork);
         res.json(dbArtwork);
     })
     .catch(err => {
         return res.json(err);
     })
+})
+
+// TODO: Route to call database to retrieve specific work of art
+router.get('/artwork/:id', (req, res) => {
+    Artwork.findById(req.params.id, (err, dbArtwork) => {
+        if (err) {
+            return res.json(err);
+        }
+        res.json(dbArtwork);
+    } );
 })
 
 module.exports = router;
