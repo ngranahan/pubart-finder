@@ -58,7 +58,7 @@ class Homepage extends Component {
                     <div className="flex-wrapper">
                         <Header />
                         <main className="container">
-                            <Photo />
+                            <Photo/>
                         </main>
                         <Footer />
                             {/* <p className="lead"> Login or register to continue.</p>
