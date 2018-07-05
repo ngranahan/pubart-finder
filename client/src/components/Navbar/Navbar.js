@@ -23,7 +23,7 @@ export default class CustomNavbar extends Component {
               Art Near Me
             </NavItem>
 
-     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
+     <NavDropdown eventKey={3} title="Register" id="basic-nav-dropdown">
         <MenuItem eventKey={3.1} componentClass={Link} href="/about" to="/login">Login</MenuItem>
         <MenuItem eventKey={3.2}componentClass={Link} href="/about" to="/register">Register</MenuItem>
         {/* Logout option */}
