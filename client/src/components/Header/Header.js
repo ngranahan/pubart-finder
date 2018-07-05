@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from "../Navbar";
+import MainNavbar from "../Navbar";
 import { Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Header.css';
@@ -11,7 +11,7 @@ render(){
     return(
 
      <header>
-        <Navbar />
+        <MainNavbar />
         <Jumbotron />
 
      </header>
