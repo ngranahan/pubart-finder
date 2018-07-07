@@ -2,7 +2,6 @@ const axios = require('axios');
 const express = require('express');
 const Artwork = require('../models/art');
 const router = express.Router();
-const mongoose = require('mongoose');
 
 // Route to call api to grab artwork
 router.get('/art/callapi', (req, res) => {
