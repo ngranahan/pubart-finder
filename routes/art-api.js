@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 // Route to call api to grab artwork
 router.get('/art/callapi', (req, res) => {
      
-    axios.get('http://www.philart.net/api/art/8.json')
+    axios.get('http://www.philart.net/api/art/10.json')
         .then((response) => {
 
             //console.log(response);
