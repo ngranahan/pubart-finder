@@ -63,8 +63,8 @@ render() {
 
 
 
-     {this.state.user ? (
-     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">         
+     {this.state.user ? ( 
+     <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown">         
      <MenuItem eventKey={3.1} componentClass={Link} href="/collection" to="/collection">Collection</MenuItem>
      <MenuItem divider />
      <MenuItem eventKey={3.2} componentClass={Link} href="/" to="/"><a className="btn btn-success" className="text-center"  onClick={this.logoutUser}> Logout </a>
