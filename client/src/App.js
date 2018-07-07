@@ -10,10 +10,6 @@ import NoMatch from './pages/NoMatch';
 import React, { Component } from 'react';
 import './app.css';
 
-// import './App.css';
-
-
-
 class App extends Component {
 
     render() {
