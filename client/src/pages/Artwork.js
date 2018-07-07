@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API from '../utils/API';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Marker from "../components/Marker";
 import 'react-bootstrap';
 import './Homepage.css';
 import GoogleMapReact from 'google-map-react';
@@ -38,7 +39,7 @@ class Artwork extends Component {
             <div>
 
                 <div>
-                    <Header />
+                    <Header title={this.state.artwork.title}/>
                     <main className="container">
                         <h1>{this.state.artwork.title}</h1>
                         <div className="">
@@ -58,6 +59,10 @@ class Artwork extends Component {
                                     zoom={this.state.zoom}
                                     >
                                     {/* Marker component will be loaded here */}
+                                    <Marker 
+                                    lat={this.state.center.lat}
+                                    lng={this.state.center.lng}
+                                    />
                                 </GoogleMapReact>
                             </div>
                             <button className="btn btn-default btn-large">Get Directions</button>
