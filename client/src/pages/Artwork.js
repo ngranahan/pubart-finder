@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/ReactFooter";
 import 'react-bootstrap';
 import './Homepage.css';
 import GoogleMapReact from 'google-map-react';
