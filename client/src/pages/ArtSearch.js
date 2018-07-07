@@ -3,6 +3,7 @@ import API from '../utils/API';
 import Header from "../components/Header";
 import Footer from "../components/ReactFooter";
 import Marker from "../components/Marker";
+import SearchBar from "../components/SearchBar";
 import 'react-bootstrap';
 import './Homepage.css';
 import GoogleMapReact from 'google-map-react';
@@ -13,7 +14,7 @@ class Artwork extends Component {
           lat: 39.969550,
           lng: -75.184500
         },
-        zoom: 12
+        zoom: 14
       };
 
     state = {
@@ -23,13 +24,13 @@ class Artwork extends Component {
     };
 
     componentDidMount() {
-        this.loadSpecificArtwork();
+        this.getArtwork();
     }
 
-    loadSpecificArtwork = () => {
-        API.getSpecificArt(this.props.match.params.id)
+    getArtwork = () => {
+        API.getArt()
             .then(res => {
-                this.setState({ artwork: res.data, center: { lat: parseFloat(res.data.lat), lng: parseFloat(res.data.lng) } })
+                this.setState({ artwork: res.data })
             })
             .catch(err => console.log(err));
     };
@@ -41,28 +42,28 @@ class Artwork extends Component {
                 <div>
                     <Header title={this.state.artwork.title}/>
                     <main className="container">
-                        <h1>{this.state.artwork.title}</h1>
                         <div className="">
-                                <div className="">
-                                    <img src={this.state.artwork.imageurl}/>
-                                </div>
+                            <SearchBar />
                                 
                         </div>
                         <div className="">
-                            <h1>Artwork Location</h1>
                             <div style={{ height: '400px', width: '90%' }}>
                                 <GoogleMapReact
                                     bootstrapURLKeys={{ key: 'AIzaSyAIsVz5-LxFA6Ujpkl8bKUzeZV4Ctnu1us' }}
                                     defaultCenter={this.props.center}
-                                    center={this.state.center}
                                     defaultZoom={this.props.zoom}
-                                    zoom={this.state.zoom}
+                                    // center={this.state.center}
+                                    // zoom={this.state.zoom}
                                     >
-                                    {/* Marker component will be loaded here */}
-                                    <Marker 
-                                    lat={this.state.center.lat}
-                                    lng={this.state.center.lng}
-                                    />
+
+                                    {/* Load all of the artwork on the map - we should wait to load the markers until the user clicks search */}
+                                    {this.state.artwork.map(artwork => (
+                                        <Marker 
+                                        lat={artwork.lat}
+                                        lng={artwork.lng}
+                                        /> 
+                                    ))}
+                                    
                                 </GoogleMapReact>
                             </div>
                             <button className="btn btn-default btn-large">Get Directions</button>

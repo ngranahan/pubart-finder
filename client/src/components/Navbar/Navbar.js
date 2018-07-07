@@ -57,7 +57,7 @@ render() {
             <NavItem eventKey={1} componentClass={Link} href="/" to="/">
               Home
             </NavItem>
-            <NavItem eventKey={2} componentClass={Link} href="/about" to="/about">
+            <NavItem eventKey={2} componentClass={Link} href="/artsearch" to="/artsearch">
               Art Near Me
             </NavItem>
 
