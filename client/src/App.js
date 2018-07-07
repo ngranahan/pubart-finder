@@ -1,4 +1,3 @@
-// import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './pages/Home';
 import Homepage from './pages/Homepage';
@@ -33,6 +32,7 @@ class App extends Component {
       );
     }
     }
+    
 
 export default App;
 
