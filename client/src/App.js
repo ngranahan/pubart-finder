@@ -8,8 +8,6 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import NoMatch from './pages/NoMatch';
 import React, { Component } from 'react';
-import { GoogleApiWrapper } from 'google-maps-react' 
-import MapContainer from './pages/googleMapContainer'
 import './app.css';
 
 // import './App.css';
