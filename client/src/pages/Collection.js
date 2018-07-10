@@ -1,3 +1,4 @@
+// THIS IS ALL JUST COPIED FROM THE HOMEPAGE. NEED TO CUSTOMIZE FOR MY COLLECTION.
 import React, { Component } from 'react';
 import API from '../utils/API';
 import Header from "../components/Header";

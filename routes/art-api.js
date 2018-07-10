@@ -6,7 +6,8 @@ const router = express.Router();
 // Route to call api to grab artwork
 
 router.get('/art/callapi', (req, res) => {
-    console.log("route hit");
+console.log("route hit");
+
 
     // const axios = require('axios');
     function makeRequestsFromArray(arr) {
