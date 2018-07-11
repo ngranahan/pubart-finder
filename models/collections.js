@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 
 const CollectionsSchema = new Schema({
 
-    collections:[{ artwork: {
+    artworks:[{ 
         type: Schema.Types.ObjectId,
         ref: "Artwork"
     }
-    }],
+    ],
     
     user: {
         type: Schema.Types.ObjectId,

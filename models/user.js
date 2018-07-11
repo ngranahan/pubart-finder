@@ -11,15 +11,10 @@ const UserSchema = new Schema({
     password: String,
     },
 
-    saved: {
-        type: Boolean,
-        default: false
-      },
-      
-    collections: [{
+    mycollection: {
         type: Schema.Types.ObjectId,
         ref: "Collections"
-     }]
+     }
 });
 
 UserSchema.plugin(passportLocalMongoose);
