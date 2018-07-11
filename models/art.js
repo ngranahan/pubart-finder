@@ -11,10 +11,6 @@ const ArtworkSchema = new Schema({
     lat: String,
     lng: String,
 
-    collections: [{
-        type: Schema.Types.ObjectId,
-        ref: "Collections"
-     }]
 });
 
 // This creates our model from the above schema, using mongoose's model method

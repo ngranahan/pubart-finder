@@ -27,8 +27,8 @@ export default {
         console.log("getSpecificArt function called");
         return axios.get("/artwork/" + id);
     },
-    addCollections: function () {
+    addCollections: function (imageId) {
        console.log(" get collections ");
-       return axios.get("/add/collections");
+       return axios.post("/add/collections", imageId);
     }
 };

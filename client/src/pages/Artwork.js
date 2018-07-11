@@ -19,7 +19,8 @@ class Artwork extends Component {
     state = {
         artwork: [],
         center: {},
-        zoom: 16    
+        zoom: 16,
+        saved:false    
     };
 
     componentDidMount() {
@@ -36,14 +37,16 @@ class Artwork extends Component {
     
     
     saveToCollections=()=>{
-        API.addCollections()
+        API.addCollections(this.props.match.params.id)
         .then(res => {
-        console.log("RESPONSE FROM BACK END TO MAKE STATE: ", res)
-          this.setState({ artwork: res.data })
+            
+        // console.log("RESPONSE FROM BACK END TO MAKE STATE: ", res)
+          this.setState({ saved: true })
           // console.log(this.state.artwork[0].title)
         })
         .catch(err => console.log(err));
           }
+
 
     render() {
         return (
