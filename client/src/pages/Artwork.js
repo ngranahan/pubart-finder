@@ -33,6 +33,17 @@ class Artwork extends Component {
             })
             .catch(err => console.log(err));
     };
+    
+    
+    saveToCollections=()=>{
+        API.addCollections()
+        .then(res => {
+        console.log("RESPONSE FROM BACK END TO MAKE STATE: ", res)
+          this.setState({ artwork: res.data })
+          // console.log(this.state.artwork[0].title)
+        })
+        .catch(err => console.log(err));
+          }
 
     render() {
         return (
@@ -45,12 +56,15 @@ class Artwork extends Component {
                         <div className="">
                                 <div className="">
                                     <img src={this.state.artwork.imageurl}/>
+                                    {/* Add  to collections button */}
+                                    <button class= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button>
                                 </div>
                                 
                         </div>
                         <div className="">
                             <h1>Artwork Location</h1>
                             <div style={{ height: '400px', width: '90%' }}>
+                            
                                 <GoogleMapReact
                                     bootstrapURLKeys={{ key: 'AIzaSyAIsVz5-LxFA6Ujpkl8bKUzeZV4Ctnu1us' }}
                                     defaultCenter={this.props.center}

@@ -5,13 +5,14 @@ import Homepage from './pages/Homepage';
 import GetArt from './pages/GetArt';
 import Artwork from './pages/Artwork';
 import ArtSearch from './pages/ArtSearch';
-import Collection from './pages/Collection';
+import Collections from './pages/Collections';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NoMatch from './pages/NoMatch';
+
 import React, { Component } from 'react';
-import { GoogleApiWrapper } from 'google-maps-react' 
-import MapContainer from './pages/googleMapContainer'
+import { GoogleApiWrapper } from 'google-maps-react' ;
+import MapContainer from './pages/googleMapContainer';
 import './app.css';
 
 // import './App.css';
@@ -30,7 +31,7 @@ class App extends Component {
         <Route exact path="/callapi" component={GetArt} />
         <Route exact path="/artwork/:id" component={Artwork} />
         <Route exact path="/artsearch" component={ArtSearch} />
-        <Route exact path="/mycollection" component={Collection} />
+        <Route exact path="/collections" component={Collections} />
         {/* <Route path="/:user" component={User}/> */}
 
         <Route exact path="/home" component={Home} />
