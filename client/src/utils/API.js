@@ -17,14 +17,18 @@ export default {
     },
     // Function calls artwork api with a given id to get artwork data then store to database
     callAPI: function () {
-        return axios.get("/art/callapi")
+        return axios.get("/art/callapi");
     },
     getArt: function () {
-        console.log("getArt function called")
+        console.log("getArt function called");
         return axios.get("/art/getart");
     },
     getSpecificArt: function (id) {
-        console.log("getSpecificArt function called")
+        console.log("getSpecificArt function called");
         return axios.get("/artwork/" + id);
+    },
+    addCollections: function () {
+       console.log(" get collections ");
+       return axios.get("/add/collections");
     }
 };

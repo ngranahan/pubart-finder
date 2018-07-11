@@ -5,8 +5,21 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
+    
+    body: {
     username: String,
-    password: String
+    password: String,
+    },
+
+    saved: {
+        type: Boolean,
+        default: false
+      },
+      
+    collections: [{
+        type: Schema.Types.ObjectId,
+        ref: "Collections"
+     }]
 });
 
 UserSchema.plugin(passportLocalMongoose);
