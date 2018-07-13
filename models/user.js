@@ -10,11 +10,18 @@ const UserSchema = new Schema({
     username: String,
     password: String,
     },
-
-    mycollection: {
-        type: Schema.Types.ObjectId,
-        ref: "Collections"
-     }
+    mycollection: [
+        {
+          // Store ObjectIds in the array
+          type: Schema.Types.ObjectId,
+          // The ObjectIds will refer to the ids in the Note model
+          ref: "Artwork"
+        }
+      ]
+    // mycollection: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Collections"
+    //  }
 });
 
 UserSchema.plugin(passportLocalMongoose);

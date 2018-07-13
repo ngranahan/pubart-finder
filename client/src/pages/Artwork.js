@@ -37,9 +37,10 @@ class Artwork extends Component {
     
     
     saveToCollections=()=>{
-        API.addCollections(this.props.match.params.id)
+        console.log('artwork page user id: ' + window.hackyUser)
+        API.addCollections(this.props.match.params.id, window.hackyUser)
         .then(res => {
-            
+        
         // console.log("RESPONSE FROM BACK END TO MAKE STATE: ", res)
           this.setState({ saved: true })
           // console.log(this.state.artwork[0].title)
@@ -60,7 +61,7 @@ class Artwork extends Component {
                                 <div className="">
                                     <img src={this.state.artwork.imageurl}/>
                                     {/* Add  to collections button */}
-                                    <button class= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button>
+                                    <button className= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button>
                                 </div>
                                 
                         </div>
