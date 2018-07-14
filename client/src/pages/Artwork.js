@@ -100,7 +100,7 @@ class Artwork extends Component {
                                 <div className="">
                                     <img src={this.state.artwork.imageurl}/>
                                     {/* Add  to collections button */}
-                                    <button class= "btn btn-primary" onClick={this.saveToCollections} onClick={this.findId} href = "/collections" > Save to my collections </button>
+                                    {/* <button class= "btn btn-primary" onClick={this.saveToCollections} onClick={this.findId} href = "/collections" > Save to my collections </button> */}
                                     <button className= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button>
                                 </div>
                                 

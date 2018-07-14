@@ -53,3 +53,12 @@ app.listen(PORT, function () {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
     console.log(`🌎  ==> http://localhost:${PORT}`);
 });
+
+
+
+// app.use(express.session({ 
+//     store: new mongoStore({url:process.env.MONGOLAB_URI}),
+//     maxAge: 300000,
+//     secret: process.env.COOKIEHASH
+//   })
+// );

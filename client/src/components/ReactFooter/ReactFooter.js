@@ -21,22 +21,14 @@ class ReactFooter extends Component {
                             className="text-center text-md-right">
          <div className="footer-copyright text-center py-3">
                     <div className="contaioner-fluid">
-                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://www.MDBootstrap.com"> PubArt Philly </a>
+                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://github.com/ngranahan/pubart-finder" target="_blank" > PubArt Philly </a>
                     </div>
                 </div>
                             </Col>
                         </Row>
                     </div>
                 </div>
-        
 
-                  
-         
-                <div className="footer-copyright text-center py-3">
-                    <div className="contaioner-fluid">
-                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://www.MDBootstrap.com"> PubArt Philly </a>
-                    </div>
-                </div>
             </div>
         );
     }
