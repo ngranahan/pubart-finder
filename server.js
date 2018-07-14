@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const passport = require('passport');
+var cookieParser = require('cookie-parser');
 const LocalStrategy = require('passport-local').Strategy;
 // 
 // var path = require("path");
@@ -16,8 +17,7 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-app.use(express.cookieParser(process.env.COOKIEHASH));
+app.use(cookieParser());
 
 app.use(require("express-session")({
     secret: process.env.COOKIEHASH || 'keyboard cat',
