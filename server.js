@@ -39,6 +39,7 @@ app.use(passport.session());
 const routes = require("./routes/auth-api");
 const art_routes = require("./routes/art-api");
 const collections_routes = require("./routes/collectionRoute");
+const 
 
 app.use(routes);
 app.use(art_routes);
