@@ -28,7 +28,20 @@ export default {
         return axios.get("/artwork/" + id);
     },
     addCollections: function (imageId) {
-       console.log(" get collections ");
-       return axios.post("/add/collections", imageId);
-    }
+    //    console.log(" get collections ");
+    //    console.log("PARAMETER IN UTILS: ", imageId)
+       var pictureId = {
+           id:imageId
+       };
+       return axios.post("/add/collections", pictureId);
+    },
+
+    findUserId: function (userId) {
+        console.log(" find user id ");
+        console.log("FrontEnd user id:", userId);
+        var User = {
+            id:userId
+        };
+        return axios.get("/get/id", userId);
+     }
 };

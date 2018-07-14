@@ -8,6 +8,7 @@ import './Homepage.css';
 import GoogleMapReact from 'google-map-react';
 
 class Artwork extends Component {
+     
     static defaultProps = {
         center: {
           lat: 39.969550,
@@ -17,15 +18,40 @@ class Artwork extends Component {
       };
 
     state = {
+        user:null,
         artwork: [],
         center: {},
         zoom: 16,
         saved:false    
     };
-
+    
     componentDidMount() {
-        this.loadSpecificArtwork();
+        this.getUser();
+       this.loadSpecificArtwork();
+       this.saveToCollections();
     }
+    
+    getUser = () => {
+        // api call
+        API.getUser()
+            .then(res => {
+                this.setState(res.data);
+            })
+            .catch(err => console.log(err));
+    }
+    
+    logoutUser = event => {
+        event.preventDefault();
+        API.logoutUser().then(res => {
+            console.log(res.data);
+            if (res.data === true) {
+                this.setState({ user: null });
+            }
+        })
+            .catch(err => console.log(err));
+    }
+    
+
 
     loadSpecificArtwork = () => {
         API.getSpecificArt(this.props.match.params.id)
@@ -34,7 +60,6 @@ class Artwork extends Component {
             })
             .catch(err => console.log(err));
     };
-    
     
     saveToCollections=()=>{
         API.addCollections(this.props.match.params.id)
@@ -46,6 +71,20 @@ class Artwork extends Component {
         })
         .catch(err => console.log(err));
           }
+
+
+
+          findId=()=>{
+            API.findUserId(this.props.match.params.id)
+            console.log(this.props.match.params.id)
+            .then(res => {
+                
+            console.log("UserId ", res);
+          
+              // console.log(this.state.artwork[0].title)
+            })
+            .catch(err => console.log(err));
+              }
 
 
     render() {
@@ -60,7 +99,7 @@ class Artwork extends Component {
                                 <div className="">
                                     <img src={this.state.artwork.imageurl}/>
                                     {/* Add  to collections button */}
-                                    <button class= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button>
+                                    <button class= "btn btn-primary" onClick={this.saveToCollections} onClick={this.findId} href = "/collections" > Save to my collections </button>
                                 </div>
                                 
                         </div>

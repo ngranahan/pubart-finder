@@ -17,10 +17,14 @@ componentDidMount() {
 }
 
 getUser = () => {
+    // console.log(window);
+    // console.log(window.userGlobal);
     // api call
     API.getUser()
         .then(res => {
             this.setState(res.data);
+            window.userGlobal= res.data;
+            console.lop(window.userGlobal.user._id);
         })
         .catch(err => console.log(err));
 }
