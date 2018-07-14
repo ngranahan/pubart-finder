@@ -13,13 +13,19 @@ console.log("route hit");
     // const axios = require('axios');
     function makeRequestsFromArray(arr) {
         let index = 0;
-        console.log("function test1")
-request();
+        console.log("function test1");
+       
+        window.onload =function (){
+         request();
+        };
+
+
+
         function request() {
             console.log("ugh");
             return axios.get('http://www.philart.net/api/art/' + index + '.json').then((response) => {
                 let artwork = {};
-                console.log("function test")
+                console.log("function test");
                 artwork.artist = response.data.body.artists[0].name;
                 artwork.title = response.data.body.title.display;
                 artwork.imageurl = response.data.body.pictures[0].large.url;
@@ -32,11 +38,11 @@ request();
                     { upsert: true, new: true, runValidators: true })
                     .then((dbArtwork) => {
                         // console.log(dbArtwork);
-                    })
+                    });
                 index++;
                 console.log(index);
                 if (index >= arr.length) {
-                    return 'done'
+                    return 'done';
                 }
                 return request();
             })
