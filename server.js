@@ -16,8 +16,11 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(express.cookieParser(process.env.COOKIEHASH));
+
 app.use(require("express-session")({
-    secret: 'keyboard cat',
+    secret: process.env.COOKIEHASH || 'keyboard cat',
     resave: false,
     saveUninitialized: false
 }));
