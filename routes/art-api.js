@@ -87,7 +87,7 @@ request();
 //         });
 // });
 
-// TODO: Route to call database to retrieve artwork
+// Route to call database to retrieve artwork
 router.get('/art/getart', (req, res) => {
     Artwork.find({})
         .then((dbArtwork) => {
@@ -98,7 +98,7 @@ router.get('/art/getart', (req, res) => {
         })
 })
 
-// TODO: Route to call database to retrieve specific work of art
+// Route to call database to retrieve specific work of art
 router.get('/artwork/:id', (req, res) => {
     Artwork.findById(req.params.id, (err, dbArtwork) => {
         if (err) {

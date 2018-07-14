@@ -21,17 +21,17 @@ export default class CustomNavbar extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} componentClass={Link} href="/" to="/">
+            <NavItem eventKey={1} componentClassName={Link} href="/" to="/">
               Home
             </NavItem>
-            <NavItem eventKey={2} componentClass={Link} href="/about" to="/about">
+            <NavItem eventKey={2} componentClassName={Link} href="/about" to="/about">
               Art Near Me
             </NavItem>
 
      <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">
-        <MenuItem eventKey={3.1} componentClass={Link} href="/collection" to="/collection">My Collection</MenuItem>
+        <MenuItem eventKey={3.1} componentClassName={Link} href="/collection" to="/collection">My Collection</MenuItem>
         <MenuItem divider />
-        <MenuItem eventKey={3.2} componentClass={Link} className="btn btn-default" onClick={this.logoutUser}>Logout>
+        <MenuItem eventKey={3.2} componentClassName={Link} className="btn btn-default" onClick={this.logoutUser}>Logout>
         </MenuItem> 
         {/* Logout option */}
       </NavDropdown>

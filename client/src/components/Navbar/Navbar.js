@@ -21,6 +21,8 @@ getUser = () => {
     API.getUser()
         .then(res => {
             this.setState(res.data);
+            window.hackyUser = res.data.user._id;
+            console.log('navbar user: ' + window.hackyUser);
         })
         .catch(err => console.log(err));
 }
@@ -67,14 +69,14 @@ render() {
      <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown">         
      <MenuItem eventKey={3.1} componentClass={Link} href="/collections" to="/collections">My Collection</MenuItem>
      <MenuItem divider />
-     <MenuItem eventKey={3.2} componentClass={Link} href="/" to="/"><a className="btn btn-success" className="text-center"  onClick={this.logoutUser}> Logout </a>
+     <MenuItem eventKey={3.2} componentClass={Link} href="/" to="/" onClick={this.logoutUser}>Logout
      </MenuItem>
      </NavDropdown>
     ) : (
      <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">     
      <MenuItem eventKey={3.1} componentClass={Link} href="/about" to="/register">Register</MenuItem> 
      <MenuItem divider />            
-     <MenuItem eventKey={3.2} componentClass={Link} href="/about" to="/login"> <a className="btn btn-default text-center" className="text-center"> Login </a> </MenuItem>
+     <MenuItem eventKey={3.2} componentClass={Link} href="/about" to="/login">Login</MenuItem>
 
      </NavDropdown>)}
   
