@@ -14,10 +14,17 @@ const LocalStrategy = require('passport-local').Strategy;
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
+
 app.use(cookieParser());
 
 // Define middleware here
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
 app.use(require("express-session")({
     secret: process.env.COOKIEHASH || 'keyboard cat',
