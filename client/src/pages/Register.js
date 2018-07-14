@@ -44,7 +44,7 @@ class Register extends Component {
                     </div>
               
 
-                    <div class="logBody">
+                    <div className="logBody">
                     <p className="lead" className= "text-center"> <h4> Please enter your credentials below. </h4></p>
                     <br />
                     <br />
@@ -53,14 +53,14 @@ class Register extends Component {
                 <form action="/register" method="post" style={{ 'maxWidth': '300px' }}>
                     
                 <div className="form-group">
-                    <label class="user" for="login-username"><span class="hidden">Username</span></label>
+                    <label className="user" for="login-username"><span className="hidden">Username</span></label>
                     <br />
                     <input className="form-control" type='text' name="username" placeholder='Username' value={this.state.username} onChange={this.handleInputChange} />
                     </div>
 
 
                 <div className="form-group">
-                    <label class="lock" for="login-password"><span class="hidden">Password</span></label>
+                    <label className="lock" for="login-password"><span className="hidden">Password</span></label>
                     <br />
                     <input className="form-control" type='password' name="password" placeholder='Password' value={this.state.password} onChange={this.handleInputChange} />
                 </div>

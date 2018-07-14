@@ -20,28 +20,23 @@ export default {
         return axios.get("/art/callapi");
     },
     getArt: function () {
-        console.log("getArt function called");
         return axios.get("/art/getart");
     },
     getSpecificArt: function (id) {
-        console.log("getSpecificArt function called");
         return axios.get("/artwork/" + id);
     },
-    addCollections: function (imageId) {
-    //    console.log(" get collections ");
-    //    console.log("PARAMETER IN UTILS: ", imageId)
-       var pictureId = {
-           id:imageId
-       };
-       return axios.post("/add/collections", pictureId);
+    addCollections: function (artworkId, userId) {
+       var ids = {
+           artworkId: artworkId,
+           userId: userId
+       }
+       return axios.post("/add/collections", ids);
     },
-
-    findUserId: function (userId) {
-        console.log(" find user id ");
-        console.log("FrontEnd user id:", userId);
-        var User = {
-            id:userId
-        };
-        return axios.get("/get/id", userId);
+    getCollection: function (userId) {
+        var id = {
+            userId: userId
+        }
+        console.log('front end userid: ' + userId)
+        return axios.post("/get/collections", id);
      }
 };
