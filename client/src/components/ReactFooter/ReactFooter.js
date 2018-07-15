@@ -10,7 +10,7 @@ class ReactFooter extends Component {
         return(
 
             <div className="footer page-footer font-small">
-                <div>
+                {/* <div>
                     <div className= "container">
                         <Row className="py-4 d-flex align-items-center">
                             <Col //md="6" lg="5" 
@@ -27,7 +27,7 @@ class ReactFooter extends Component {
                             </Col>
                         </Row>
                     </div>
-                </div>
+                </div> */}
         
 
                   

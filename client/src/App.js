@@ -14,6 +14,11 @@ import React, { Component } from 'react';
 import { GoogleApiWrapper } from 'google-maps-react' ;
 import MapContainer from './pages/googleMapContainer';
 import './app.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStroopwafel, faChevronDown)
 
 // import './App.css';
 

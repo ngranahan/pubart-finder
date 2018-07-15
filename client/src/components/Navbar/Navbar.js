@@ -66,14 +66,14 @@ render() {
 
 
      {this.state.user ? ( 
-     <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown">         
+     <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown" className="main-nav-item">         
      <MenuItem eventKey={3.1} componentClass={Link} href="/collections" to="/collections">My Collection</MenuItem>
      <MenuItem divider />
      <MenuItem eventKey={3.2} componentClass={Link} href="/" to="/" onClick={this.logoutUser}>Logout
      </MenuItem>
      </NavDropdown>
     ) : (
-     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">     
+     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown" className="main-nav-item">     
      <MenuItem eventKey={3.1} componentClass={Link} href="/about" to="/register">Register</MenuItem> 
      <MenuItem divider />            
      <MenuItem eventKey={3.2} componentClass={Link} href="/about" to="/login">Login</MenuItem>

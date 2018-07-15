@@ -31,7 +31,7 @@
     transform: translateY(-50%);
   }
 
-  .fa-chevron-down {
+  .chevron {
     font-size: 6rem;
     color: #D9B310;
     bottom: 40px;
