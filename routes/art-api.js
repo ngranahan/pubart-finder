@@ -10,14 +10,15 @@ router.get('/art/callapi', (req, res) => {
 console.log("route hit");
 
 
+
+
     // const axios = require('axios');
     function makeRequestsFromArray(arr) {
         let index = 0;
         console.log("function test1");
        
-        window.onload =function (){
+
          request();
-        };
 
 
 
