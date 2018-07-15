@@ -12,10 +12,7 @@ render(){
 
      <header>
         <MainNavbar />
-        {/* <Jumbotron className="hero text-center"> */}
-            {/* Conditional for user and non-user */}
-            {/* <h1 className="align-middle">{this.props.title}</h1> */}
-        {/* </Jumbotron> */}
+        
 
      </header>
 );

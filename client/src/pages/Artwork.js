@@ -53,7 +53,7 @@ class Artwork extends Component {
         return (
             <div>
 
-                <div>
+                <div className="flex-wrapper">
                     <Header title={this.state.artwork.title}/>
                     <main className="container">
                         <h1>{this.state.artwork.title}</h1>
