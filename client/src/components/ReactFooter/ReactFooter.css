@@ -2,7 +2,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #14cc95;
+    background-color: #1D2731;
+    border-top: 6px solid #D9B310;
     color: white;
     text-align: center;
 }

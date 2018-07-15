@@ -9,8 +9,8 @@ class ReactFooter extends Component {
     render(){
         return(
 
-            <div className= "footer" color="blue-grey" className="page-footer font-small lighten-5 pt-0">
-                <div style={{backgroundColor: '#21d192'}}>
+            <div className="footer page-footer font-small">
+                <div>
                     <div className= "container">
                         <Row className="py-4 d-flex align-items-center">
                             <Col //md="6" lg="5" 

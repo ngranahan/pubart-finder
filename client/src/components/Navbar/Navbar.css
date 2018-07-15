@@ -1,8 +1,9 @@
 nav.navbar, .navbar-default {
-    background-color: #14cc95 !important;
+    background-color: #1D2731 !important;
     width: 100%;
     position: fixed;
     z-index: 6;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
   }
   
   .navbar-default {
@@ -39,4 +40,11 @@ nav.navbar, .navbar-default {
   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: white;
     background-color: transparent;
+  }
+
+  .main-nav-item {
+    border-bottom: 6px solid transparent;
+  }
+  .main-nav-item:hover {
+    border-bottom: 6px solid #D9B310;
   }

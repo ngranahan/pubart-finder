@@ -5,6 +5,43 @@
   }
   main {
     flex: 1 0 auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .homepage-hero {
+    height: 800px;
+    background: darkslategray url('https://s22.postimg.cc/8rwxmwkqp/lovepark.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  .homepage-tagline {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: rgba(34, 135, 209, .7);
+    color: white;
+    padding: 6rem;
+  }
+  .homepage-tagline h1 {
+    font-size: 5em;
+    font-weight: 300;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .fa-chevron-down {
+    font-size: 6rem;
+    color: #D9B310;
+    bottom: 40px;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+
+  main h1 {
+    color: white;
+    border-bottom: 6px solid #D9B310;
+    display: inline-block;
+    margin-bottom: 60px;
   }

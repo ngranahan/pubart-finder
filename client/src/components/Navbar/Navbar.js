@@ -56,10 +56,10 @@ render() {
 
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} componentClass={Link} href="/" to="/">
+            <NavItem eventKey={1} componentClass={Link} href="/" to="/" className="main-nav-item">
               Home
             </NavItem>
-            <NavItem eventKey={2} componentClass={Link} href="/artsearch" to="/artsearch">
+            <NavItem eventKey={2} componentClass={Link} href="/artsearch" to="/artsearch" className="main-nav-item">
               Search Art
             </NavItem>
 
