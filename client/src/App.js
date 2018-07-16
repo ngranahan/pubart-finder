@@ -16,9 +16,9 @@ import MapContainer from './pages/googleMapContainer';
 import './app.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faStroopwafel, faChevronDown, faHeart } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faStroopwafel, faChevronDown)
+library.add(faStroopwafel, faChevronDown, faHeart)
 
 // import './App.css';
 

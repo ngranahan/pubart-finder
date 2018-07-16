@@ -45,3 +45,43 @@
     display: inline-block;
     margin-bottom: 60px;
   }
+
+  /* Artwork Page Styles */
+  .like-icon {
+    right: 20px;
+    top: 20px;
+    z-index: 4;
+    color: white;
+    font-size: 2rem;
+}
+.artwork-page-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.artwork-page-container h1 {
+  max-width: 400px;
+}
+.art-container {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  box-shadow: 10px 10px 0px 0px rgba(34,135,209,1);
+}
+
+/* Search Page Styles */
+.search-page-container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.map-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.navbar-form .form-group {
+  margin: 0;
+  width: 100%;
+}
+
+.navbar-form .form-control {
+  width: 100%;
+  margin-left: 0;
+}

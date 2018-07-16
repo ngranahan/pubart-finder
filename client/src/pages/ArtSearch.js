@@ -42,12 +42,14 @@ class Artwork extends Component {
                 <div className="flex-wrapper">
                     <Header title={this.state.artwork.title}/>
                     <main className="container">
+                    <div className="search-page-container">
+                        <h1>Search by Location</h1>
                         <div className="">
                             <SearchBar />
                                 
                         </div>
                         <div className="">
-                            <div style={{ height: '400px', width: '90%' }}>
+                            <div className="map-container" style={{ height: '400px', width: '100%' }}>
                                 <GoogleMapReact
                                     bootstrapURLKeys={{ key: 'AIzaSyAIsVz5-LxFA6Ujpkl8bKUzeZV4Ctnu1us' }}
                                     defaultCenter={this.props.center}
@@ -68,6 +70,7 @@ class Artwork extends Component {
                             </div>
                             <button className="btn btn-default btn-large">Get Directions</button>
                         </div> 
+                        </div>
                     </main>
                     <Footer />
                 </div>
