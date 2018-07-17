@@ -86,6 +86,7 @@ class Artwork extends Component {
                                     />
                                 </GoogleMapReact>
                             </div>
+                            <h4>Location: {this.state.artwork.location}</h4>
                             <button className="btn btn-default btn-large">Get Directions</button>
                         </div> 
                         </div>

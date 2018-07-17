@@ -36,6 +36,7 @@ console.log("route hit");
                 artwork.imageurl = response.data.body.pictures[0].large.url;
                 artwork.lat = response.data.body.location.latitude;
                 artwork.lng = response.data.body.location.longitude;
+                artwork.location = response.data.body.location.description;
 
                 Artwork.findOneAndUpdate(
                     { title: response.data.body.title.display },

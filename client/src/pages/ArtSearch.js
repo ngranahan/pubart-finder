@@ -83,9 +83,10 @@ class Artwork extends Component {
                                 </GoogleMapReact>
                                 {this.state.markerInfo === 'show' ? (
                                     <div className={this.state.markerInfo} className="info-box">
-                                    {console.log(this.state.markerData.title)}
-                                        <h4><a href={"artwork/" + this.state.markerData._id}>{this.state.markerData.title}</a></h4>
-                                        <p><em>{this.state.markerData.artist}</em></p>
+                                    {console.log(this.state.markerData.location)}
+                                        <h4><a href={"art/" + this.state.markerData._id}>{this.state.markerData.title}</a></h4>
+                                        <p><em>By {this.state.markerData.artist}</em></p>
+                                        <p><em>Location: {this.state.markerData.location}</em></p>
                                 </div>
                                 ) : (
                                     <div></div>

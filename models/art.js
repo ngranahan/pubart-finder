@@ -10,6 +10,7 @@ const ArtworkSchema = new Schema({
     imageurl: String,
     lat: String,
     lng: String,
+    location: String
 
 });
 

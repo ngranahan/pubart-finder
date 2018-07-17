@@ -66,6 +66,23 @@
   margin: 0 auto 60px auto;
   box-shadow: 10px 10px 0px 0px rgba(34,135,209,1);
 }
+.artwork-page-container h4 {
+  color: white;
+}
+.artwork-page-container button, .search-page-container button {
+  border-radius: 0;
+  background-image: none;
+  text-shadow: none;
+  color: white;
+  border: none;
+  background-color: #2287d1;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+.artwork-page-container button:hover, .search-page-container button:hover {
+  color: white;
+  background-color: #257dbd;
+}
 
 /* Search Page Styles */
 .search-page-container {
@@ -108,4 +125,10 @@
 .info-box a:hover {
   text-decoration: none;
   border-bottom: 6px solid #D9B310;
+}
+.info-box h4 {
+  margin-bottom: 1.5rem;
+}
+.info-box p {
+  margin-bottom: 0;
 }
