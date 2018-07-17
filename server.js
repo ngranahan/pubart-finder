@@ -40,11 +40,15 @@ const routes = require("./routes/auth-api");
 const art_routes = require("./routes/art-api");
 const collections_routes = require("./routes/collectionRoute");
 
+
+
 app.use(routes);
 app.use(art_routes);
 app.use(collections_routes);
 
-
+app.get('*', (res, req) => {
+res.sendFile(path.join(__dirname, "client/build/index.html"));
+});
 // 
 
 
