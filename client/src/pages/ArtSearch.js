@@ -84,7 +84,7 @@ class Artwork extends Component {
                                 {this.state.markerInfo === 'show' ? (
                                     <div className={this.state.markerInfo} className="info-box">
                                     {console.log(this.state.markerData.title)}
-                                        <h4><a href={"artwork/" + this.state.markerData._id}>{this.state.markerData.title}</a></h4>
+                                        <h4><a href={"art/" + this.state.markerData._id}>{this.state.markerData.title}</a></h4>
                                         <p><em>{this.state.markerData.artist}</em></p>
                                 </div>
                                 ) : (

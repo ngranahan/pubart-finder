@@ -53,7 +53,7 @@ export default class Photo extends Component {
             {this.state.artwork.map(artwork => (
               
               <div className="photo-panel">
-              <a href={"/artwork/" + artwork._id} >
+              <a href={"/art/" + artwork._id} >
                 <div className="photo-content relative">
                   <img src={artwork.imageurl} onClick={this.viewArt} data-id={artwork._id}/>
                   <h4 className="absolute art-title">{artwork.title}</h4>
