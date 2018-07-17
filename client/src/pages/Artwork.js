@@ -6,6 +6,7 @@ import Marker from "../components/Marker";
 import 'react-bootstrap';
 import './Homepage.css';
 import GoogleMapReact from 'google-map-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Artwork extends Component {
     static defaultProps = {
@@ -53,21 +54,23 @@ class Artwork extends Component {
         return (
             <div>
 
-                <div>
+                <div className="flex-wrapper">
                     <Header title={this.state.artwork.title}/>
                     <main className="container">
+                        <div className="artwork-page-container">
                         <h1>{this.state.artwork.title}</h1>
                         <div className="">
-                                <div className="">
+                                <div className="art-container relative">
+                                <FontAwesomeIcon icon="heart" className="like-icon absolute" onClick={this.saveToCollections} />
                                     <img src={this.state.artwork.imageurl}/>
                                     {/* Add  to collections button */}
-                                    <button className= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button>
+                                    {/* <button className= "btn btn-primary" onClick={this.saveToCollections} href = "/collections" > Save to my collections </button> */}
                                 </div>
                                 
                         </div>
                         <div className="">
                             <h1>Artwork Location</h1>
-                            <div style={{ height: '400px', width: '90%' }}>
+                            <div style={{ height: '400px', width: '100%' }}>
                             
                                 <GoogleMapReact
                                     bootstrapURLKeys={{ key: 'AIzaSyAIsVz5-LxFA6Ujpkl8bKUzeZV4Ctnu1us' }}
@@ -85,6 +88,7 @@ class Artwork extends Component {
                             </div>
                             <button className="btn btn-default btn-large">Get Directions</button>
                         </div> 
+                        </div>
                     </main>
                     <Footer />
                 </div>

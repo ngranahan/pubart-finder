@@ -1,8 +1,9 @@
 nav.navbar, .navbar-default {
-    background-color: #14cc95 !important;
+    background-color: #1D2731 !important;
     width: 100%;
     position: fixed;
     z-index: 6;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
   }
   
   .navbar-default {
@@ -39,4 +40,31 @@ nav.navbar, .navbar-default {
   .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: white;
     background-color: transparent;
+  }
+
+  .main-nav-item {
+    border-bottom: 6px solid transparent;
+  }
+  .main-nav-item:hover {
+    border-bottom: 6px solid #D9B310;
+  }
+  /* This isn't working */
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #1d2731;
+    color: white;
+    background-image: none;
+  }
+  .dropdown-menu, .dropdown-menu .divider {
+    background-color: #1d2731;
+    padding-bottom: 0;
+  }
+  .dropdown-menu>li>a {
+    color: white;
+    border-bottom: 6px solid transparent;
+  }
+  .dropdown-menu>li>a:hover {
+    border-bottom: 6px solid #D9B310;
+    background-color: #1d2731;
+    background-image: none;
+    color: white;
   }

@@ -8,6 +8,7 @@ import ReactFooter from "../components/ReactFooter";
 import { Link } from 'react-router-dom';
 import 'react-bootstrap';
 import './Homepage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Homepage extends Component {
 
@@ -15,18 +16,33 @@ class Homepage extends Component {
         return (
             <div>
 
-                    <div className="flex-wrapper">
-                        <Header />
-               
-                        <main className="container">
-                    
-                        <Photo/>
-                        </main>
-
-
-                        <ReactFooter />
+                <div className="flex-wrapper">
+                    <header>
+                    <Header />
+                        <div className="homepage-hero relative">
+                            <div className="homepage-tagline absolute">
+                                <h1 className="absolute"><b>DISCOVER</b><br/>FREE PUBLIC<br/> <b>ART</b> IN THE CITY<br/>OF BROTHERLY<br/><b>LOVE</b></h1>
+                            </div>
+                            <FontAwesomeIcon icon="chevron-down" className="chevron absolute" />
+                            <i className="fas fa-chevron-down absolute"></i>
                         </div>
-               
+                        
+                    </header>
+                    
+
+                    <main className="container">
+                        <div className="text-center">
+                            <h1 className="text-center">Browse Art</h1>
+                        </div>
+                        
+
+                        <Photo />
+                    </main>
+
+
+                    <ReactFooter />
+                </div>
+
             </div>
         );
     }

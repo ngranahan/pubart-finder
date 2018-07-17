@@ -56,24 +56,24 @@ render() {
 
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} componentClass={Link} href="/" to="/">
+            <NavItem eventKey={1} componentClass={Link} href="/" to="/" className="main-nav-item">
               Home
             </NavItem>
-            <NavItem eventKey={2} componentClass={Link} href="/artsearch" to="/artsearch">
+            <NavItem eventKey={2} componentClass={Link} href="/artsearch" to="/artsearch" className="main-nav-item">
               Search Art
             </NavItem>
 
 
 
      {this.state.user ? ( 
-     <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown">         
+     <NavDropdown eventKey={3} title="Profile" id="basic-nav-dropdown" className="main-nav-item">         
      <MenuItem eventKey={3.1} componentClass={Link} href="/collections" to="/collections">My Collection</MenuItem>
      <MenuItem divider />
      <MenuItem eventKey={3.2} componentClass={Link} href="/" to="/" onClick={this.logoutUser}>Logout
      </MenuItem>
      </NavDropdown>
     ) : (
-     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown">     
+     <NavDropdown eventKey={3} title="Account" id="basic-nav-dropdown" className="main-nav-item">     
      <MenuItem eventKey={3.1} componentClass={Link} href="/about" to="/register">Register</MenuItem> 
      <MenuItem divider />            
      <MenuItem eventKey={3.2} componentClass={Link} href="/about" to="/login">Login</MenuItem>

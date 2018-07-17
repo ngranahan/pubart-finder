@@ -20,7 +20,9 @@ class Artwork extends Component {
     state = {
         artwork: [],
         center: {},
-        zoom: 16    
+        zoom: 16,
+        markerData: {},
+        markerInfo: 'hide'    
     };
 
     componentDidMount() {
@@ -35,39 +37,64 @@ class Artwork extends Component {
             .catch(err => console.log(err));
     };
 
+    markerClick = (e, data) => {
+        console.log(e.target.id);
+        API.getSpecificArt(e.target.id)
+            .then(res => {
+                this.setState({ markerData: res.data })
+                this.setState({ markerInfo: 'show' })
+                console.log(res.data)
+                
+            })
+            .catch(err => console.log(err));
+    }
+
     render() {
         return (
             <div>
 
-                <div>
+                <div className="flex-wrapper">
                     <Header title={this.state.artwork.title}/>
                     <main className="container">
+                    <div className="search-page-container">
+                        <h1>Search the Art Map</h1>
                         <div className="">
-                            <SearchBar />
+                            {/* <SearchBar /> */}
                                 
                         </div>
                         <div className="">
-                            <div style={{ height: '400px', width: '90%' }}>
-                                <GoogleMapReact
+                            <div className="map-container" style={{ height: '400px', width: '100%' }}>
+                                <GoogleMapReact 
                                     bootstrapURLKeys={{ key: 'AIzaSyAIsVz5-LxFA6Ujpkl8bKUzeZV4Ctnu1us' }}
                                     defaultCenter={this.props.center}
                                     defaultZoom={this.props.zoom}
                                     // center={this.state.center}
                                     // zoom={this.state.zoom}
                                     >
-
+                                
                                     {/* Load all of the artwork on the map - we should wait to load the markers until the user clicks search */}
                                     {this.state.artwork.map(artwork => (
-                                        <Marker 
+                                        <div className="map-marker" onClick={((e, data) => this.markerClick(e, data))}
+                                        id={artwork._id} 
                                         lat={artwork.lat}
                                         lng={artwork.lng}
-                                        /> 
+                                        ></div>
                                     ))}
-                                    
                                 </GoogleMapReact>
+                                {this.state.markerInfo === 'show' ? (
+                                    <div className={this.state.markerInfo} className="info-box">
+                                    {console.log(this.state.markerData.title)}
+                                        <h4><a href={"artwork/" + this.state.markerData._id}>{this.state.markerData.title}</a></h4>
+                                        <p><em>{this.state.markerData.artist}</em></p>
+                                </div>
+                                ) : (
+                                    <div></div>
+                                )}
+                                
                             </div>
                             <button className="btn btn-default btn-large">Get Directions</button>
                         </div> 
+                        </div>
                     </main>
                     <Footer />
                 </div>
