@@ -65,10 +65,11 @@ class Login extends Component {
     render() {
         return (
             <div className="pageContainer"> 
+                <div className="overlay">
                 <div className="loginContainer">
 
                     <div className="logTitle">
-                         <h1 className= "text-center" > Login Page </h1>
+                         <h1 className= "text-center" >Login</h1>
                     </div>
               
 
@@ -80,17 +81,17 @@ class Login extends Component {
             
                     
                     
-                <form class= "myFrom" action="/login" method="post" style={ {'maxWidth': '300px'} } class="text-center">
+                <form class= "myFrom" action="/login" method="post" className="center-align">
                     
                 <div className="form-group">
-                    <label class="user" for="login-username"><span class="hidden">Username</span></label>
+                    {/* <label class="user" for="login-username"><span class="hidden">Username</span></label> */}
               
                     <input type='text' name="username" placeholder='Username' value={this.state.username} onChange={this.handleInputChange} />
                     </div>
 
 
                 <div className="form-group">
-                    <label class="lock" for="login-password"><span class="hidden">Password</span></label>
+                    {/* <label class="lock" for="login-password"><span class="hidden">Password</span></label> */}
                     
                     <input type='password' name="password" placeholder='Password' value={this.state.password} onChange={this.handleInputChange} />
                 </div>
@@ -98,14 +99,15 @@ class Login extends Component {
 
            <Row className="show-grid">
                 <Col  xs={6} md={2} xsOffset={4}>
-                    <button className="btn btn-default button1" type='submit' onClick={this.handleFormSubmit}>Submit</button>&nbsp;
+                    <button className="btn button1" type='submit' onClick={this.handleFormSubmit}>Submit</button>&nbsp;
                 </Col>
                 <Col  xs={6} md={4} xsOffset={2}>
-                    <a className="btn btn-default btn-primary button2" href='/'>Cancel</a> 
+                    <a className="btn button2" href='/'>Cancel</a> 
                </Col>
          </Row>      
                     </form>
                     </div>
+            </div>
             </div>
             </div>
         );

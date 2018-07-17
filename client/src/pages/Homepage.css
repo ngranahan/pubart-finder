@@ -79,9 +79,15 @@
 .navbar-form .form-group {
   margin: 0;
   width: 100%;
+  position: relative;
 }
 
 .navbar-form .form-control {
   width: 100%;
   margin-left: 0;
+}
+.submit-btn {
+  position: absolute;
+  right: 15px;
+  top: 8px;
 }

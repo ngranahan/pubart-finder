@@ -17,7 +17,7 @@ return(
           <FormGroup >
           <FormControl type="text" placeholder="Search" className="search-bar"/>
           </FormGroup>{' '}
-          <Button type="submit">Submit</Button>
+          <Button type="submit" className="submit-btn">Submit</Button>
         </Navbar.Form>
     </Col>
 </Row>
