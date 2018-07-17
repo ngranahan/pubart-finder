@@ -36,7 +36,6 @@ router.get('/logout', function (req, res) {
     res.redirect('/');
 });
 
-
 router.get('/error', function (req, res) {
     res.render('error');
 });

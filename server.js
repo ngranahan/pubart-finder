@@ -47,12 +47,10 @@ app.use(routes);
 app.use(art_routes);
 app.use(collections_routes);
 
-app.get('*', (res, req) => {
-res.sendFile(path.join(__dirname, "client/build/index.html"));
+// fallback to react if route not found
+app.get("/*", function(req, res) {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
-// 
-
-
 
 // passport config
 const User = require('./models/user');

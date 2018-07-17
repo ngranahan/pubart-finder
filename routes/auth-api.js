@@ -2,6 +2,8 @@ const express = require('express');
 const passport = require('passport');
 const User = require('../models/user');
 const router = express.Router();
+const path = require("path");
+
 
 router.get('/auth/check', function (req, res) {
     if (req.user) {
@@ -32,6 +34,10 @@ router.get('/auth/logout', function (req, res) {
     req.logout();
     res.json(true);
 });
+
+// router.use(function (res,req){
+//     res.sendFile(path.join(__dirname, "../client/build/index.html"));
+//   });
 
 
 module.exports = router;
