@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import MainNavbar from "../Navbar";
-import { Jumbotron } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './Marker.css';
 
 

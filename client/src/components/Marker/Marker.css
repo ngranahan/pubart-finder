@@ -3,3 +3,8 @@
     height: 15px;
     background-color: #2287d1;
 }
+
+.map-marker:hover {
+    cursor: pointer;
+    background-color: #D9B310;
+}
