@@ -34,7 +34,7 @@ class ReactFooter extends Component {
          
                 <div className="footer-copyright text-center py-3">
                     <div className="contaioner-fluid">
-                        &copy; {(new Date().getFullYear())} Copyright: <a href="https://www.MDBootstrap.com"> PubArt Philly </a>
+                        &copy; {(new Date().getFullYear())} Copyright: <a href="/callapi"> PubArt Philly </a>
                     </div>
                 </div>
             </div>

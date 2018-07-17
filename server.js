@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const path =require ('path');
 // 
 // var path = require("path");
 // const routes = require("./routes");
@@ -40,14 +41,16 @@ const routes = require("./routes/auth-api");
 const art_routes = require("./routes/art-api");
 const collections_routes = require("./routes/collectionRoute");
 
+
+
 app.use(routes);
 app.use(art_routes);
 app.use(collections_routes);
 
-
-// 
-
-
+// fallback to react if route not found
+app.get("/*", function(req, res) {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
+});
 
 // passport config
 const User = require('./models/user');
