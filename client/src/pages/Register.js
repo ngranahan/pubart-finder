@@ -36,7 +36,8 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="pageContainer"> 
+            <div className="pageContainer">
+                <div className="overlay"> 
                 <div className="loginContainer">
 
                     <div className="logTitle">
@@ -44,38 +45,39 @@ class Register extends Component {
                     </div>
               
 
-                    <div className="logBody">
-                    <p className="lead" className= "text-center"> <h4> Please enter your credentials below. </h4></p>
+                    <div>
+                    <p className="lead" className= "text-center">Please enter your credentials below.</p>
                     <br />
                     <br />
                     
                     
-                <form action="/register" method="post" style={{ 'maxWidth': '300px' }}>
+                <form action="/register" method="post">
                     
                 <div className="form-group">
-                    <label className="user" for="login-username"><span className="hidden">Username</span></label>
-                    <br />
-                    <input className="form-control" type='text' name="username" placeholder='Username' value={this.state.username} onChange={this.handleInputChange} />
+                    {/* <label className="user" for="login-username"><span className="hidden">Username</span></label> */}
+                    {/* <br /> */}
+                    <input  type='text' name="username" placeholder='Username' value={this.state.username} onChange={this.handleInputChange} />
                     </div>
 
 
                 <div className="form-group">
-                    <label className="lock" for="login-password"><span className="hidden">Password</span></label>
-                    <br />
-                    <input className="form-control" type='password' name="password" placeholder='Password' value={this.state.password} onChange={this.handleInputChange} />
+                    {/* <label className="lock" for="login-password"><span className="hidden">Password</span></label>
+                    <br /> */}
+                    <input  type='password' name="password" placeholder='Password' value={this.state.password} onChange={this.handleInputChange} />
                 </div>
 
 
-           <Row className="show-grid">
-                <Col  xs={6} md={2} xsOffset={4}>
+           <div className="show-grid text-center">
+                
                 <button className="btn btn-default button1" type='submit' onClick={this.handleFormSubmit}>Submit</button>&nbsp;
-                </Col>
-                <Col  xs={6} md={4} xsOffset={2}>
+                
+                
                     <a className="btn btn-default btn-primary button2" href='/'>Cancel</a> 
-               </Col>
-         </Row>      
+               
+         </div>      
                     </form>
                     </div>
+            </div>
             </div>
             </div>
         );

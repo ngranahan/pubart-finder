@@ -78,6 +78,9 @@ class Login extends Component {
 
                     <div class="logBody">
                    
+                    <div>
+                    <p className="lead" className= "text-center">Please enter your credentials below.</p>
+                    <br />
                    
                     
             
@@ -99,26 +102,26 @@ class Login extends Component {
                 </div>
 
 
-           <Row className="show-grid">
-                <Col  xs={6} md={2} xsOffset={4}>
+           <div className="show-grid text-center">
+                
                     <button className="btn button1" type='submit' onClick={this.handleFormSubmit}>Submit</button>&nbsp;
-                </Col>
-                <Col  xs={6} md={4} xsOffset={2}>
                     <a className="btn button2" href='/'>Cancel</a> 
-               </Col>
-         </Row>      
+               
+         </div>      
                     </form>
                     </div>
             </div>
             </div>
             </div>
-        );
+            </div>
+            
+        )}
+
+
     }
-}
 
 
-
-export default withRouter(Login);
+        export default withRouter(Login);
 
                
 
