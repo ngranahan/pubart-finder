@@ -99,6 +99,10 @@
   background-color: #257dbd;
 }
 
+button:active, .btn-default:active {
+  background-color: #257dbd;
+}
+
 /* Search Page Styles */
 .search-page-container {
   margin-top: 60px;
@@ -125,6 +129,8 @@
   top: 8px;
 }
 .info-box {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   background: rgba(34, 135, 209, .8);
   padding: 10px 40px;
@@ -146,6 +152,15 @@
 }
 .info-box p {
   margin-bottom: 0;
+}
+.info-button {
+  display: flex;
+  align-items: center;
+}
+
+.info-button button {
+  background-color: rgb(38, 49, 59);
+  color: white;
 }
 
 @media only screen and (max-width: 1080px) {
