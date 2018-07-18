@@ -11,7 +11,7 @@
 
   .homepage-hero {
     height: 800px;
-    background: darkslategray url('https://s22.postimg.cc/8rwxmwkqp/lovepark.jpg') no-repeat center;
+    background: darkslategray url('https://s22.postimg.cc/8rwxmwkqp/lovepark.jpg') no-repeat left;
     background-size: cover;
   }
 
@@ -26,6 +26,21 @@
   }
   .homepage-tagline h1 {
     font-size: 5em;
+    font-weight: 300;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .homepage-tagline-small {
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: rgba(34, 135, 209, .7);
+    color: white;
+    padding: 4rem;
+  }
+  .homepage-tagline-small h1 {
     font-weight: 300;
     top: 50%;
     transform: translateY(-50%);
@@ -131,4 +146,30 @@
 }
 .info-box p {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1080px) {
+  .homepage-tagline h1 {
+    font-size: 4em;
+  }
+  .homepage-tagline {
+    display: none;
+  }
+  .homepage-tagline-small {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .homepage-tagline-small {
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 70%;
+    width: 100%;
+  }
+  .homepage-tagline-small h1 {
+    top: 30%;
+  }
 }
