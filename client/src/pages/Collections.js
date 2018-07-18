@@ -42,7 +42,7 @@ class Collections extends Component {
 
                     <main className="container">
 
-                        <div>
+                        <div className="collection-page-container">
                             {this.state.mycollection.length ? (
                                 <Grid className="photo-container">
 

@@ -73,7 +73,7 @@ class Login extends Component {
                     </div>
               
 
-                    <div class="logBody">
+                    <div>
                     <p className="lead" className= "text-center">Please enter your credentials below.</p>
                     <br />
                    

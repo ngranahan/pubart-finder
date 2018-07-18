@@ -54,7 +54,7 @@
     color: white;
     font-size: 2rem;
 }
-.artwork-page-container {
+.artwork-page-container, .collection-page-container {
   margin-top: 60px;
   margin-bottom: 60px;
 }
