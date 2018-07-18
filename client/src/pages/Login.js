@@ -64,24 +64,26 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="pageContainer"> 
+            <div className="pageContainer" className="flex-grid" >  
                 <div className="overlay">
-                <div className="loginContainer">
+                <div className="loginContainer" > 
 
                     <div className="logTitle">
                          <h1 className= "text-center" >Login</h1>
+                         <p className="lead" className= "text-center"> <h4> Please enter your credentials below. </h4></p>
+                         <br />
+                         <br />
                     </div>
               
 
                     <div class="logBody">
-                    <p className="lead" className= "text-center"> <h4> Please enter your credentials below. </h4></p>
-                    <br />
+                   
                    
                     
             
                     
                     
-                <form class= "myFrom" action="/login" method="post" className="center-align">
+                <form  className= "myFrom" action="/login" method="post" className="center-align" >
                     
                 <div className="form-group">
                     {/* <label class="user" for="login-username"><span class="hidden">Username</span></label> */}

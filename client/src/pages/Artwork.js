@@ -6,7 +6,7 @@ import Marker from "../components/Marker";
 import 'react-bootstrap';
 import './Homepage.css';
 import GoogleMapReact from 'google-map-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Artwork extends Component {
     static defaultProps = {
