@@ -48,7 +48,9 @@ html {
   margin:0;
 } 
 
-
+.loginContainer h1, .loginContainer p {
+  color: white;
+}
 
 .logBody {
   margin-left: auto;
@@ -63,28 +65,24 @@ html {
 
 .buttonGroup {
   margin-left: 20;
-  
-
 }
 
-.button1 {
 
-font-size:20px;
-  color: #ffff;
+.button1, .button2 {
   border-radius: 0;
-  background: rgba(34,135,209,1);
-  -webkit-transition: background-color .5s;
-  transition: background-color .8s;
-}  
+  background-image: none;
+  text-shadow: none;
+  color: white;
+  border: none;
+  background-color: #2287d1;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+}
 
-  .button2 {
-    border-radius: 0;
-  font-size:20px;
-  color: #ffff;
-  background: rgba(34,135,209,1);
-  -webkit-transition: background-color .5s;
-  transition: background-color .8s;
-}  
+.button1:hover, .button2:hover {
+  color: white;
+  background-color: #2577b3;
+
+}
 
 
  .form-group {
@@ -101,14 +99,14 @@ font-size:20px;
  .user:before {
   content: '\f007';
   font: 14px fontawesome;
-	color: #464444;
+	color: white;
 }
 
 
 .lock:before {
   content: '\f023';
   font: 14px fontawesome;
-	color: #5b5b5b;
+	color: white;
 }
 
 
@@ -116,7 +114,6 @@ font-size:20px;
  input {
   margin-left: auto;
   margin-right: auto;
-  margin-left: 50px;
   width: 550px;
   background-color: rgb(255, 255, 255);
 }
