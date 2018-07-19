@@ -162,6 +162,10 @@ button:active, .btn-default:active {
   background-color: rgb(38, 49, 59);
   color: white;
 }
+.info-button button:hover, .info-button button:active, .info-button button:focus {
+  background-color: rgb(26, 33, 39);
+  color: white;
+}
 
 @media only screen and (max-width: 1080px) {
   .homepage-tagline h1 {
