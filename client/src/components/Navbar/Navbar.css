@@ -18,6 +18,8 @@ nav.navbar, .navbar-default {
   
   .navbar-default .navbar-brand {
     color: white;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   
   .navbar-default .navbar-toggle {
